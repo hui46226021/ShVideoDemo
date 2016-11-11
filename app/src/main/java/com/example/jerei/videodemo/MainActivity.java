@@ -13,6 +13,7 @@ import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -22,6 +23,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements VideoInputDialog.
 
     ImageView image;
     Button button;
+    String path;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,12 @@ public class MainActivity extends AppCompatActivity implements VideoInputDialog.
                         VideoInputDialog.show(getSupportFragmentManager(),MainActivity.this);
             }
         });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openView();
+            }
+        });
     }
 
 
@@ -55,7 +64,17 @@ public class MainActivity extends AppCompatActivity implements VideoInputDialog.
 
         Log.e("地址:",path);
         //根据视频地址获取缩略图
+        this.path =path;
         Bitmap bitmap = ThumbnailUtils.createVideoThumbnail(path, MediaStore.Video.Thumbnails.MINI_KIND);
         image.setImageBitmap(bitmap);
+    }
+
+    public void openView(){
+        if(TextUtils.isEmpty(path)){
+
+            return;
+        }
+        File file = new File(path);
+        SystemAppUtils.openFile(file,this);
     }
 }
