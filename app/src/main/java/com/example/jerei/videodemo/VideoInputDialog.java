@@ -240,7 +240,7 @@ public class VideoInputDialog extends DialogFragment {
     private File getOutputMediaFile(){
 
 //        return  new File(getContext().getExternalCacheDir().getAbsolutePath() + "/" + fileName);
- fileName = Environment.getExternalStorageDirectory()+ "/" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".mp4";
+         fileName = Environment.getExternalStorageDirectory()+ "/Video_" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".mp4";
         Log.e("filePath",fileName);
         return  new File(fileName);
     }
