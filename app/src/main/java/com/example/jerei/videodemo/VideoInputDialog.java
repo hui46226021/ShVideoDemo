@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -240,7 +241,12 @@ public class VideoInputDialog extends DialogFragment {
     private File getOutputMediaFile(){
 
 //        return  new File(getContext().getExternalCacheDir().getAbsolutePath() + "/" + fileName);
-         fileName = Environment.getExternalStorageDirectory()+ "/Video_" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".mp4";
+
+        File dir = new File(Environment.getExternalStorageDirectory() + "/" + "video_demo");
+        if (!dir.exists()){
+            dir.mkdir();
+        }
+         fileName = dir+ "/video_" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".mp4";
         Log.e("filePath",fileName);
         return  new File(fileName);
     }
