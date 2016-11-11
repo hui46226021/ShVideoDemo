@@ -211,11 +211,15 @@ public class VideoInputDialog extends DialogFragment {
         mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.CAMCORDER);
         //视频
         mMediaRecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+        //设置分辨率为480P
         mMediaRecorder.setProfile(CamcorderProfile.get(CamcorderProfile.QUALITY_480P));
         //路径
         mMediaRecorder.setOutputFile(getOutputMediaFile().toString());
         mMediaRecorder.setPreviewDisplay(mPreview.getHolder().getSurface());
+
+
         try {
+            //旋转90度 保持竖屏
             mMediaRecorder.setOrientationHint(90);
             mMediaRecorder.prepare();
         } catch (IllegalStateException e) {
