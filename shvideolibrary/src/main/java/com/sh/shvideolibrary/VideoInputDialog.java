@@ -257,8 +257,8 @@ public class VideoInputDialog extends DialogFragment {
     private File getOutputMediaFile(){
 
 //        return  new File(getContext().getExternalCacheDir().getAbsolutePath() + "/" + fileName);
-        PackageManager pm = mContext.getPackageManager();
-        String appName = mContext.getApplicationInfo().loadLabel(pm).toString();
+//        PackageManager pm = mContext.getPackageManager();
+        String appName =      mContext. getPackageName();
         File dir = new File(Environment.getExternalStorageDirectory() + "/" + appName);
         if (!dir.exists()){
             dir.mkdir();

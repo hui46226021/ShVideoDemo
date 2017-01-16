@@ -499,9 +499,8 @@ public class VideoInputActivity extends AppCompatActivity {
     private File getOutputMediaFile(){
 
 //        return  new File(getContext().getExternalCacheDir().getAbsolutePath() + "/" + fileName);
-        PackageManager pm = getPackageManager();
-        String appName = getApplicationInfo().loadLabel(pm).toString();
-        File dir = new File(Environment.getExternalStorageDirectory() + "/" + appName);
+        String appName = getPackageName();
+        File dir = new File(Environment.getExternalStorageDirectory() + "/" +appName);
         if (!dir.exists()){
             dir.mkdir();
         }
