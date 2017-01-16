@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">VideoDemo</string>
     <string name="chat_video_too_short">录制过短，请重试</string>
+
+
+    <!-- 权限申请-->
+    <string name="tips_permission_request_title">权限申请</string>
+    <string name="tips_permission_request_content">权限申请啊权限申请啊,权限申请啊权限申请啊,到底给不给,没权限搞不了sd卡啊!!!</string>
+    <string name="go_and_grant_permission">到设置页面重新授予权限</string>
+    <string name="deny_and_quit">知道了,任性退出</string>
+
+
+
 </resources>

@@ -1,0 +1,7 @@
+<resources>
+
+
+    <style name="maskDialog" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@color/text_blue1</item>
+    </style>
+</resources>

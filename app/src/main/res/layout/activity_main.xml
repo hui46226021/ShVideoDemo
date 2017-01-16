@@ -12,6 +12,49 @@
         android:id="@+id/button"
         android:layout_height="60dp"
         android:layout_width="match_parent"
+        android:text="录制短视频"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
         android:text="录制视频"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:text="压缩视频"/>
 
+    <!-- 定义一个水平进度条 -->
+    <ProgressBar android:layout_width="fill_parent"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"/>
+    <TextView
+        android:gravity="center"
+        android:text="压缩前"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/first"
+        android:gravity="center"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:text="压缩后"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/imag2"
+        android:layout_height="160dp"
+        android:layout_width="90dp"
+        android:scaleType="fitXY"/>
 </LinearLayout>
