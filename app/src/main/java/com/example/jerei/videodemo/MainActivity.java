@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity implements VideoInputDialog.
 
     TextView first;
     TextView back;
-    ProgressBar progressBar;
+    ProgressBar  progressBar;
 
 
     static String TAG="MainActivity";
 
     String path;//视频录制输出地址
     //视频压缩数据地址
-    private String currentOutputVideoPath = "/mnt/sdcard/videokit/out.mp4";
+    private String currentOutputVideoPath = "/mnt/sdcard/out.mp4";
     private static final int REQUEST_CODE_FOR_RECORD_VIDEO = 5230;//录制视频请求码
     Double videoLength=0.0;//视频时长
     @Override

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.example.jerei.videodemo"
+        applicationId "com.sh.zsh.code"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
