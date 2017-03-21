@@ -1,6 +1,7 @@
 package com.sh.shvideolibrary.compression;
 
 import android.app.Activity;
+import android.os.Build;
 import android.util.Log;
 
 import java.io.File;
@@ -44,6 +45,11 @@ public class CompressorUtils {
      * 压缩
      */
     public void execCommand(CompressListener compressListener) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+            compressListener.onExecFail("暂时不支持android7.0以上版本");
+            return;
+        }
 
         String  command ="-y -i " + currentInputVideoPath + " -strict -2 -vcodec libx264 -preset ultrafast " +
                 "-crf 24 -acodec aac -ar 44100 -ac 2 -b:a 96k -s 640x480 -aspect 16:9 " + currentOutputVideoPath;;

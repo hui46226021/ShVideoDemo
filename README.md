@@ -8,13 +8,13 @@ Download the latest JAR or grab via Maven:
 <dependency>
   <groupId>com.sh.shvideo</groupId>
   <artifactId>shvideolibrary</artifactId>
-  <version>1.0.3</version>
+  <version>1.5.0</version>
   <type>pom</type>
 </dependency>
 ~~~
 or Gradle:
 ~~~gradle
-compile 'com.sh.shvideo:shvideolibrary:1.0.3'
+compile 'com.sh.shvideo:shvideolibrary:1.5.0'
 ~~~
 <font color=#ff0022ff size=7 face="黑体">注意:targetSdkVersion 23 及以上 要注意 6.0运行时权限 或干脆用23以下</font>
 

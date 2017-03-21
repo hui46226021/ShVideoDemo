@@ -2,19 +2,19 @@
     package="com.sh.shvideolibrary">
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
 
-    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
 
-    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-permission-sdk-23 android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <application android:allowBackup="true" android:label="@string/app_name"
         android:supportsRtl="true">
 <activity android:name=".VideoInputActivity"/>
